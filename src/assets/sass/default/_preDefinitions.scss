@@ -1,0 +1,71 @@
+body {
+    color: $color-neutral-100;
+    background-color: $color-white;
+    padding: 0 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: var(--font-size-medium);
+}
+::selection {
+    background: $color-neutral-100;
+    color: $color-white;
+}
+
+/*BEGIN IMAGES*/
+%images {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+/*END IMAGES*/
+
+/// begin colors
+@each $color, $value in $colors {
+    %#{$color} {color: #{$value}}
+}
+@each $color, $value in $bg-colors {
+    %bg-#{$color} {background-color: #{$value}}
+}
+//end colors
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 146rem;
+}
+
+/*begin centralize*/
+%centralize {
+    @include mixin-centralize;
+}
+/*end centralize*/
+%none {
+    display: none;
+}
+%transition {
+    transition: all .3s linear;
+}
+strong {font-weight: bold;}
+button {
+    @include center;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+input, textarea, select {
+    outline: none;
+    border: 0;
+    width: 100%;
+}
+
+%title-default {
+    
+}
+%button-default {
+    
+}
