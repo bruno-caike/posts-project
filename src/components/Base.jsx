@@ -3,11 +3,11 @@ import Footer from './Footer';
 
 import '../assets/sass/app.scss';
 
-const App = () => (
+const App = ({ children }) => (
     <>
         <Header />
         <main>
-            
+            {children}
         </main>
         <Footer />
     </>
