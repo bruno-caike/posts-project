@@ -1,7 +1,9 @@
-const User = ({ id }) => (
-    <h1>
-        USER
-    </h1>
+import Base from '../../components/Base';
+
+const User = () => (
+    <Base>
+    
+    </Base>
 );
 
 export default User;

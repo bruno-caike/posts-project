@@ -1,0 +1,22 @@
+// begin header-page
+.header-page {
+    @include bg-color(color-primary-100);
+    > div {
+        > ul {
+            @include d-flex;
+            @include items-center;
+            justify-content: flex-end;
+            height: 10rem;
+
+            > li {
+                &:not(:last-child) {margin-right: 1.5rem;}
+                > a {
+                    @include transition;
+                    @include color(color-white);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+// end header-page

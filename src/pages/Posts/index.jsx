@@ -1,6 +1,8 @@
+import Base from '../../components/Base';
+
 const Posts = () => (
-    <h1>
-        POSTS
-    </h1>
+    <Base>
+    
+    </Base>
 );
 export default Posts;

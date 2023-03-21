@@ -43,6 +43,8 @@ body {
     @include mixin-centralize;
 }
 /*end centralize*/
+%flex {display: flex;}
+%items-center {align-items: center;}
 %none {
     display: none;
 }

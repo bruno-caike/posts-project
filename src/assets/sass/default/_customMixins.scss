@@ -5,42 +5,19 @@
     justify-content: center;
 }
 
+// mixin que extende da classe placeholder de flex
+@mixin d-flex {
+    @extend %flex;
+}
+
+// mixin que extende da classe placeholder de items center
+@mixin items-center {
+    @extend %items-center;
+}
+
 // mixin que extende da classe placeholder de centralize
 @mixin center {
     @extend %centralize;
-}
-
-// mixin de criar uma grid, onde se insere a quantidade de colunas, linhas, espaçamente entre elas e o alinhamento.
-// temos a verificação a mixin foi feita para um escopo global com isso quando não que e propriedade especifica coloca false no lugar ai ele não adiciona no final
-@mixin grid ($columns, $rows, $gap, $align) {
-    display: grid;
-    @if $columns != false {
-        grid-template-columns: $columns;
-    }
-    @if $rows != false {
-        grid-template-rows: $rows;
-    }
-    @if $gap != false {
-        grid-gap: $gap;
-    }
-    @if $align != false {
-        align-items: $align;
-    }
-}
-
-// mixin de criar um flexbox, onde se insere a forma de justificamento do itens, alinhamento, e direção.
-// temos a verificação a mixin foi feita para um escopo global com isso quando não que e propriedade especifica coloca false no lugar ai ele não adiciona no final
-@mixin flex ($justify, $align, $direction: false) {
-    display: flex;
-    @if $justify != false {
-        justify-content: $justify;
-    }
-    @if $align != false {
-        align-items: $align;
-    }
-    @if $direction != false {
-        flex-direction: $direction;
-    }
 }
 
 // mixin de cor é inserido a cor ai verifica sem tem aquela cor inserida

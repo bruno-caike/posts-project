@@ -1,6 +1,8 @@
+import Base from '../../components/Base';
+
 const Users = () => (
-    <h1>
-        USERS
-    </h1>
+    <Base>
+    
+    </Base>
 );
 export default Users;

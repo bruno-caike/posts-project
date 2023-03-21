@@ -1,7 +1,9 @@
+import Base from '../components/Base';
+
 const Home = () => (
-    <h1>
-        HOME
-    </h1>
+    <Base>
+        Home
+    </Base>
 );
 
 export default Home;
