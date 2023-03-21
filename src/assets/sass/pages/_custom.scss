@@ -3,9 +3,7 @@
     @include bg-color(color-primary-100);
     > div {
         > ul {
-            @include d-flex;
-            @include items-center;
-            justify-content: flex-end;
+            @include center;
             height: 10rem;
 
             > li {
@@ -23,3 +21,23 @@
     }
 }
 // end header-page
+
+// begin tag main
+main {
+    min-height: calc(100vh - 20rem);
+}
+// end tag main
+
+// begin footer-page
+.footer-page {
+    @include bg-color(color-primary-100);
+    @include color(color-white);
+    @include center;
+    > div {
+        @include center;
+        text-align: center;
+        font-size: 1.2rem;
+        height: 10rem;
+    }
+}
+// end footer-page
