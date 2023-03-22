@@ -33,7 +33,6 @@ const Post = () => {
                     setUser(valueUser);
                     setComments(valueComments);
                     setLoading(false);
-                    console.log(valuePost, valueUser, valueComments);
                 } else {
                     setExist(false);
                 }
