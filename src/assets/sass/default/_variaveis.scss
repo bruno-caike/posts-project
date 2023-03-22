@@ -14,6 +14,7 @@ $color-neutral-200: #4D5053;
 $color-neutral-300: #7A7D80;
 $color-neutral-400: #A0AFBA;
 $color-neutral-500: #ACB9C1;
+$color-neutral-600: #F5F5F5;
 $color-primary-100: #3F5DB3;
 $color-primary-200: #3E75C3;
 $color-white: #FFFFFF;
@@ -27,6 +28,7 @@ $colors: map_merge(
         "color-neutral-300": $color-neutral-300,
         "color-neutral-400": $color-neutral-400,
         "color-neutral-500": $color-neutral-500,
+        "color-neutral-600": $color-neutral-600,
         "color-primary-100": $color-primary-100,
         "color-primary-200": $color-primary-200,
         "color-white": $color-white,
@@ -39,6 +41,7 @@ $bg-colors: map_merge(
         "color-neutral-300": $color-neutral-300,
         "color-neutral-400": $color-neutral-400,
         "color-neutral-500": $color-neutral-500,
+        "color-neutral-600": $color-neutral-600,
         "color-primary-100": $color-primary-100,
         "color-primary-200": $color-primary-200,
         "color-white": $color-white,

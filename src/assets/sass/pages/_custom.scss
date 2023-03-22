@@ -22,11 +22,61 @@
 }
 // end header-page
 
+// begin loading
+.loading {
+    width: 10rem;
+}
+// end loading
+
 // begin tag main
 main {
+    @include bg-color(color-neutral-600);
     min-height: calc(100vh - 20rem);
 }
 // end tag main
+
+// begin s-list-posts
+.s-list-posts {
+    padding: 6rem 0;
+    > div {
+        > header {
+            margin-bottom: 4rem;
+            > h2 {@include title;}
+        }
+        > nav {
+            > ul {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 2rem;
+                > li {height: 100%}
+            }    
+        }
+    }
+}
+.card-post {
+    @include bg-color(color-white);
+    @include color(color-neutral-100);
+    @include transition;
+    display: grid;
+    height: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem 0 rgba($color-neutral-100,.4);
+    > article {
+        > header {
+            margin-bottom: 1rem;
+            > h2 {
+                font-weight: bold;
+                font-size: var(--font-size-x-medium);
+            }
+        }
+    }
+    &:hover {
+        @include color(color-primary-100);
+        transform: scale(1.03);
+    }
+}
+// end s-list-posts
 
 // begin footer-page
 .footer-page {

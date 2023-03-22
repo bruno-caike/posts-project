@@ -5,3 +5,5 @@ export const routes = {
     users: '/users',
     usersShow: (id, slug) => `/users/${id}/${slug}`,
 }
+
+export const url = "https://jsonplaceholder.typicode.com";
