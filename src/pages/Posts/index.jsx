@@ -27,7 +27,7 @@ const Posts = () => {
             <section className="s-list-posts">
                 <div className="container">
                     <header>
-                        <h2>Listagem de posts</h2>
+                        <h1>Listagem de posts</h1>
                     </header>
                     {loading ? <Loading /> :
                         (posts.length > 0 ? 

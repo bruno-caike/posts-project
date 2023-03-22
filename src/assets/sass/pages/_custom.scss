@@ -41,7 +41,7 @@ main {
     > div {
         > header {
             margin-bottom: 4rem;
-            > h2 {@include title;}
+            > h1 {@include title;}
         }
         > nav {
             > ul {
@@ -77,6 +77,79 @@ main {
     }
 }
 // end s-list-posts
+
+// begin s-show-post
+.s-show-post {
+    padding: 6rem 0;
+    > div {
+        > header, > article > header {
+            > h1, > h2 {
+                @include title;
+                margin-bottom: 2rem;
+            }
+            > p {
+                font-size: var(--font-size-x-medium);
+            }
+        }
+        > article {
+            > header {
+                > p {font-weight: 600}
+            }
+            > a {
+                @include center;
+                @include transition;
+                @include bg-color(color-primary-100);
+                @include color(color-white);
+                max-width: 18rem;
+                padding: 1.5rem 1rem;
+                margin-top: 2rem;
+                border-radius: 1rem;
+                font-weight: 600;
+                &:hover {
+                    @include bg-color(color-primary-200);
+                    transform: scale(1.03);
+                }
+                
+            }
+        }
+        > ul, > article {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: .1rem solid rgba($color-neutral-500, .5);
+        }
+        > ul {
+            > h2 {
+                @include title;
+                margin-bottom: 2rem;
+            }
+            > div {
+                > li {
+                    &:not(:last-child) {
+                        border-bottom: .1rem dotted $color-neutral-500;
+                        padding-bottom: 1rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.card-comment {
+    > a {
+        @include color(color-primary-200);
+        @include transition;
+        font-size: var(--font-size-x-small);
+        &:hover {
+            @include bg-color(color-primary-100);
+        }
+    }
+    > h3 {
+        font-size: var(--font-size-x-medium);
+        font-weight: bold;
+        margin: .7rem 0;
+    }
+}
+// end s-show-post
 
 // begin footer-page
 .footer-page {
