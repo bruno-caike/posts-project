@@ -46,7 +46,6 @@ const Posts = () => {
                             </nav> : 
                             <p>Não temos nenhum registro</p>
                         )
-                        
                     }
                 </div>
             </section>
