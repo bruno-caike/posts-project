@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Base from '../../components/Base';
 import Loading from '../../components/Loading';
-import { url } from '../../utils/variables';
+import { routes, url } from '../../utils/variables';
 
 const User = () => {
     const [user, setUser] = useState(null);
