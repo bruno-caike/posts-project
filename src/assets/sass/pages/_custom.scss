@@ -228,7 +228,29 @@ main {
     }
     
 }
-// end s-show-users
+// end s-show-
+
+// begin s-error
+.s-error {
+    padding: 6rem 0;
+    > div {
+        @include center;
+        flex-direction: column;
+        text-align: center;
+        > header {
+            > h1 {
+                @include title;
+                margin-bottom: 2rem;
+            }
+            > p {font-size: var(--font-size-x-medium)}
+        }
+        > a {
+            @include button;
+        }
+    }
+   
+}
+// end s-error
 
 // begin footer-page
 .footer-page {
