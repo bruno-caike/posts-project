@@ -70,5 +70,17 @@ input, textarea, select {
     font-size: var(--font-size-large);
 }
 %button-default {
-    
+    @include center;
+    @include transition;
+    @include bg-color(color-primary-100);
+    @include color(color-white);
+    max-width: 22rem;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    &:hover {
+        @include bg-color(color-primary-200);
+        transform: scale(1.03);
+    }
 }

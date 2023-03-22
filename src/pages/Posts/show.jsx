@@ -18,6 +18,21 @@ const Post = () => {
     const [exist, setExist] = useState(true);
     const { id } = useParams();
 
+    const addLocalStorage = (post) => {
+        const last_posts = localStorage.getItem("last_posts");
+        if (last_posts != null) {
+            let json_post = JSON.parse(last_posts);
+            let inArray = false;
+            for (const jp of json_post) post.id == jp.id ? inArray = true : '';
+            if (!inArray) {
+                json_post.push(post);
+                localStorage.setItem("last_posts", JSON.stringify(json_post));
+            }
+        } else {
+            localStorage.setItem("last_posts", JSON.stringify([post]));
+        }
+    }
+
     useEffect(() => {
         const intId = parseInt(id);
         if (intId != 0 && !isNaN(intId)) {
@@ -33,6 +48,7 @@ const Post = () => {
                     setUser(valueUser);
                     setComments(valueComments);
                     setLoading(false);
+                    addLocalStorage(valuePost);
                 } else {
                     setExist(false);
                 }

@@ -95,6 +95,9 @@ main {
             > header {
                 > p {font-weight: 600}
             }
+            > a {
+                @include button;
+            }
         }
         > ul, > article {
             margin-top: 3rem;
@@ -116,26 +119,6 @@ main {
                 }
             }
         }
-        > article > a, .not-exist > a {
-            @include center;
-            @include transition;
-            @include bg-color(color-primary-100);
-            @include color(color-white);
-            max-width: 22rem;
-            padding: 1.5rem 1rem;
-            margin-top: 2rem;
-            border-radius: 1rem;
-            font-weight: 600;
-            &:hover {
-                @include bg-color(color-primary-200);
-                transform: scale(1.03);
-            }
-        }
-        .not-exist {
-            > p {
-                @include title;
-            }
-        }
     }
 }
 .card-comment {
@@ -152,6 +135,10 @@ main {
         font-weight: bold;
         margin: .7rem 0;
     }
+}
+.not-exist {
+    > p {@include title;}
+    > a {@include button}
 }
 // end s-show-post
 
@@ -200,6 +187,48 @@ main {
     }
 }
 // end s-list-users
+
+// begin s-show-users
+.s-show-users {
+    padding: 6rem 0;
+    > div {
+        > header {
+            margin-bottom: 2rem;
+            > h1 {
+                @include title;
+            }
+        }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3rem;
+            > li {
+                font-size: var(--font-size-x-medium);
+                > p {
+                    margin-top: .5rem;
+                    > a {   
+                        @include transition;
+                        @include color(color-primary-200);
+                        &:hover {
+                            @include color(color-primary-100);
+                        }
+                    }
+                }
+            }
+        }
+        > div {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: .1rem dotted $color-neutral-500;
+            > p {
+                @include title;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+}
+// end s-show-users
 
 // begin footer-page
 .footer-page {
