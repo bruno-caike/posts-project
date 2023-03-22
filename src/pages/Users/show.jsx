@@ -34,8 +34,8 @@ const User = () => {
                 <div className="container">
                     {!exist ? 
                         <div className='not-exist'>
-                            <p>Post não encontrado</p>
-                            <Link to={routes.posts}>Voltar para Listagem</Link>
+                            <p>Usuário não encontrado</p>
+                            <Link to={routes.users}>Voltar para Listagem</Link>
                         </div> : (loading ? <Loading /> : 
                         <>
                             <header>

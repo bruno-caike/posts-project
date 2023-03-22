@@ -72,6 +72,9 @@ input, textarea, select {
 %title-default {
     font-weight: bold;
     font-size: var(--font-size-large);
+    @include responsive(480px) {
+        text-align: center;    
+    }
 }
 %button-default {
     @include center;

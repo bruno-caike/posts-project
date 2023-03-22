@@ -6,6 +6,12 @@
     --font-size-x-medium: 1.8rem; // 18px 
     --font-size-large: 3.2rem; // 32px
     --font-size-x-large: 6.4rem; // 64px
+
+    @media (max-width: 480px) {
+        --font-size-medium: 1.4rem; // 16px
+        --font-size-x-medium: 1.6rem; // 18px 
+        --font-size-large: 2.4rem; // 32px
+    }
 }
 
 // variaveis de cores

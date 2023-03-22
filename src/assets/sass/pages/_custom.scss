@@ -24,7 +24,11 @@
 
 // begin loading
 .loading {
+    display: block;
     width: 10rem;
+    @include responsive(480px) {
+        margin: 0 auto;
+    }
 }
 // end loading
 
@@ -52,6 +56,19 @@ main {
             }    
         }
     }
+    @include responsive(480px) {
+        padding: 4rem 0;
+        > div {
+            > header {
+                margin-bottom: 2rem;
+            }
+            > nav {
+                > ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
 }
 .card-post {
     @include bg-color(color-white);
@@ -74,6 +91,9 @@ main {
     &:hover {
         @include color(color-primary-100);
         transform: scale(1.03);
+    }
+    @include responsive(480px) {
+        text-align: center;
     }
 }
 // end s-list-posts
