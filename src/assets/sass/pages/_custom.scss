@@ -140,6 +140,15 @@ main {
             }
         }
     }
+    @include responsive(480px) {
+        padding: 4rem 0;
+        > div {
+            > header, > article {text-align: center;}
+            > article {
+                > a {margin: 2rem auto 0 auto;}
+            }
+        }
+    }
 }
 .card-comment {
     > a {
@@ -155,10 +164,17 @@ main {
         font-weight: bold;
         margin: .7rem 0;
     }
+    @include responsive(480px) {
+        text-align: center;
+    }
 }
 .not-exist {
     > p {@include title;}
     > a {@include button}
+    @include responsive(480px) {
+        text-align: center;
+        > a {margin: 2rem auto 0 auto;}
+    }
 }
 // end s-show-post
 
@@ -177,6 +193,15 @@ main {
                 grid-gap: 2rem;
                 > li {height: 100%}
             }    
+        }
+    }
+    @include responsive(480px) {
+        padding: 4rem 0;
+        > div {
+            > header {margin-bottom: 2rem;}
+            > nav {
+                > ul {grid-template-columns: 1fr;}
+            }
         }
     }
 }
@@ -204,6 +229,9 @@ main {
     &:hover {
         @include color(color-primary-100);
         transform: scale(1.03);
+    }
+    @include responsive(480px) {
+        text-align: center;
     }
 }
 // end s-list-users
@@ -246,7 +274,15 @@ main {
             }
         }
     }
-    
+    @include responsive(480px) {
+        padding: 4rem 0;
+        > div {
+            ul {
+                grid-template-columns: 1fr;
+                > li {text-align: center;}
+            }
+        }
+    }
 }
 // end s-show-
 
@@ -268,7 +304,16 @@ main {
             @include button;
         }
     }
-   
+    @include responsive(480px) {
+        padding: 4rem 0;
+        > div {
+            > header {
+                > p {
+                    br {display: none;}
+                }
+            }
+        }
+    }
 }
 // end s-error
 
@@ -282,6 +327,9 @@ main {
         text-align: center;
         font-size: 1.2rem;
         height: 10rem;
+    }
+    @include responsive(480px) {
+        > div {font-size: 1rem;}
     }
 }
 // end footer-page
