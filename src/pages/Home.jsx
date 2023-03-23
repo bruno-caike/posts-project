@@ -12,7 +12,6 @@ const Home = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             const dataPosts = JSON.parse(localStorage.getItem("last_posts"));
-            console.log(dataPosts)
             setPosts(dataPosts);
             setLoading(false);
         }
