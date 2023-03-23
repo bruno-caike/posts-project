@@ -2,7 +2,7 @@
 
 ### Módulos
 * `Posts`
-* `User`
+* `Users`
 
 ### Api
 Este projeto utilizou api https://jsonplaceholder.typicode.com
